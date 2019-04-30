@@ -1,0 +1,11 @@
+{
+  "name": "modularbot-ts-types",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --project tsconfig.json"
+  },
+  "author": "Jesus_Crie (lucas.malandrino@gmail.com)",
+  "license": "GPL-3.0"
+}
