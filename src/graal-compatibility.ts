@@ -64,8 +64,9 @@ export class Polyglot {
     static import(key: string): any {
     }
 
-    static eval(languageId: string, sourceCode: string): any {
-    }
+    // To avoid conflicts with the native eval method
+    // static eval(languageId: string, sourceCode: string): any {
+    // }
 
     static evalFile(languageId: string, sourceFileName: string): any {
     }

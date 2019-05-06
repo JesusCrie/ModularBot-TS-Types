@@ -1,14 +1,14 @@
 import { CallableChannel, ISnowflake } from './_markers';
 import { PrivateChannel } from './PrivateChannel';
 import { User } from './User';
+import { Region } from '../_core/Region';
 
 export interface AudioChannel extends ISnowflake {
 
 }
 
 export interface Call extends AudioChannel {
-    // TODO type
-    getRegion(): any;
+    getRegion(): Region;
 
     isGroupCall(): boolean;
 

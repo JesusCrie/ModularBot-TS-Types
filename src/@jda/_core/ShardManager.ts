@@ -9,6 +9,7 @@ import { TextChannel } from '../_entities/TextChannel';
 import { VoiceChannel } from '../_entities/VoiceChannel';
 import { Game } from '../_entities/Game';
 import { OnlineStatus } from './Presence';
+import { RestAction } from './restactions/restactions';
 
 export interface ShardManager {
     addEventListener(...listeners: Array<any>): void;
@@ -61,8 +62,7 @@ export interface ShardManager {
 
     getMutualGuilds(...users: Array<User>): Array<Guild>;
 
-    // TODO when better rest action
-    // retrieveUserById(id: string): Promise<User>;
+    retrieveUserById(id: string): RestAction<User>;
 
     getPrivateChannelById(id: string): Array<PrivateChannel>;
 

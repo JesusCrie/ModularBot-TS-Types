@@ -1,11 +1,11 @@
-import { RestActions } from './restactions';
+import { RestAction } from './restactions';
 import { Message } from '../../_entities/Message';
 import { MessageEmbed } from '../../_entities/MessageEmbed';
 import { PaginationAction } from './PaginationAction';
 import { ChannelType } from '../../_entities/Channel';
 import { MessageChannel } from '../../_entities/MessageChannel';
 
-export interface MessageAction extends RestActions<Message> {
+export interface MessageAction extends RestAction<Message> {
     isEmpty(): boolean;
 
     isEdit(): boolean;

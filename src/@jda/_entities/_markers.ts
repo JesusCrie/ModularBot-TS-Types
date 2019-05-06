@@ -2,6 +2,7 @@ import { Guild } from './Guild';
 import { Permission } from '../_core/Permission';
 import { Channel } from './Channel';
 import { Call } from './Call';
+import { RestAction } from '../_core/restactions/restactions';
 
 export interface IFakeable {
     isFake(): boolean;
@@ -28,8 +29,7 @@ export interface IPermissionHolder {
 }
 
 export interface CallableChannel extends ISnowflake {
-    // TODO when better rest action
-    startCall(): Promise<Call>;
+    startCall(): RestAction<Call>;
 
     getCurrentCall(): Call;
 }

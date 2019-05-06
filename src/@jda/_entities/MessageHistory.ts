@@ -1,6 +1,6 @@
 import { JDA } from '../_core/JDA';
 import { MessageChannel } from './MessageChannel';
-import { RestActions } from '../_core/restactions/restactions';
+import { RestAction } from '../_core/restactions/restactions';
 import { Message } from './Message';
 
 export interface MessageHistory {
@@ -12,9 +12,9 @@ export interface MessageHistory {
 
     getChannel(): MessageChannel;
 
-    retrievePast(amount: number): RestActions<Array<Message>>;
+    retrievePast(amount: number): RestAction<Array<Message>>;
 
-    retrieveFuture(amount: number): RestActions<Array<Message>>;
+    retrieveFuture(amount: number): RestAction<Array<Message>>;
 
     getRetrievedHistory(): Array<Message>;
 
@@ -27,6 +27,6 @@ export interface MessageHistory {
     getHistoryAround(channel: MessageChannel, messageId: number): MessageRetrieveAction;
 }
 
-export interface MessageRetrieveAction extends RestActions<MessageHistory> {
+export interface MessageRetrieveAction extends RestAction<MessageHistory> {
     limit(limit: number): this;
 }

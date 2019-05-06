@@ -5,6 +5,7 @@ import { Message } from './Message';
 import { User } from './User';
 import { Emote } from './Emote';
 import { Member } from './Member';
+import { AuditableRestAction, RestAction } from '../_core/restactions/restactions';
 
 // @ts-ignore
 export interface TextChannel extends Channel, MessageChannel, IMentionable {
@@ -15,27 +16,23 @@ export interface TextChannel extends Channel, MessageChannel, IMentionable {
     getSlowmode(): number;
 
     // TODO type
-    // TODO when better rest action
-    getWebhooks(): Promise<Array<any>>;
+    getWebhooks(): RestAction<Array<any>>;
 
     // TODO type
     // TODO when better rest action
     createWebhook(): Promise<any>;
 
-    // TODO when better rest action
-    deleteMessages(...messages: Array<Message>): Promise<void>;
+    deleteMessages(...messages: Array<Message>): RestAction<void>;
+
+    deleteMessagesByIds(...messages: Array<string>): RestAction<void>;
+
+    deleteWebhookById(id: string): AuditableRestAction<void>;
+
+    clearReactionsById(messageId: string): RestAction<void>;
 
     // TODO when better rest action
-    deleteMessagesByIds(...messages: Array<string>): Promise<void>;
-
-    // TODO when better rest action
-    deleteWebhookById(id: string): Promise<void>;
-
-    // TODO when better rest action
-    clearReactionsById(messageId: string): Promise<void>;
-
-    // TODO when better rest action
-    removeReactionById(messageId: string, emote: Emote | string, user: User): Promise<void>;
+    // tsc is not good with that one
+    // removeReactionById(messageId: string, emote: Emote | string, user: User): Promise<void>;
 
     canTalk(member?: Member): boolean;
 }

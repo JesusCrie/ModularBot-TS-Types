@@ -1,6 +1,8 @@
 import { IMentionable, IPermissionHolder, ISnowflake } from './_markers';
 import { Guild } from './Guild';
 import { JDA } from '../_core/JDA';
+import { RoleAction } from '../_core/restactions/RoleAction';
+import { AuditableRestAction } from '../_core/restactions/restactions';
 
 export interface Role extends ISnowflake, IMentionable, IPermissionHolder {
     getPosition(): number;
@@ -28,14 +30,12 @@ export interface Role extends ISnowflake, IMentionable, IPermissionHolder {
 
     getGuild(): Guild;
 
-    // TODO when better rest action
-    createCopy(guild?: Guild): Promise<Role>;
+    createCopy(guild?: Guild): RoleAction;
 
     // TODO type
     getManager(): any;
 
-    // TODO when better rest action
-    delete(): Promise<void>;
+    delete(): AuditableRestAction<void>;
 
     getJDA(): JDA;
 }

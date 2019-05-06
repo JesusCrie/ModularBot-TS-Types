@@ -5,6 +5,7 @@ import { JDA } from '../_core/JDA';
 import { Member } from './Member';
 import { User } from './User';
 import { MessageChannel } from './MessageChannel';
+import { AuditableRestAction } from '../_core/restactions/restactions';
 
 export interface Emote extends ISnowflake, IMentionable, IFakeable {
     getGuild(): Guild;
@@ -19,8 +20,7 @@ export interface Emote extends ISnowflake, IMentionable, IFakeable {
 
     getJDA(): JDA;
 
-    // TODO when better rest action
-    delete(): Promise<void>;
+    delete(): AuditableRestAction<void>;
 
     // TODO type
     getManager(): any;

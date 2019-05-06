@@ -3,6 +3,8 @@ import { Guild } from './Guild';
 import { Category } from './Category';
 import { Role } from './Role';
 import { Member } from './Member';
+import { ChannelAction } from '../_core/restactions/ChannelAction';
+import { AuditableRestAction } from '../_core/restactions/restactions';
 
 export enum ChannelType {
     TEXT, PRIVATE, VOICE, GROUP, CATEGORY, NEWS, STORE, UNKNOWN
@@ -35,14 +37,12 @@ export interface Channel extends ISnowflake {
     // TODO type
     getRolePermissionOverrides(): Array<any>;
 
-    // TODO better rest action
-    createCopy(guild?: Guild): any;
+    createCopy(guild?: Guild): ChannelAction;
 
     // TODO type
     getManager(): any;
 
-    // TODO when better rest action
-    delete(): any;
+    delete(): AuditableRestAction<void>;
 
     // TODO type
     createPermissionOverride(member: Member): any;

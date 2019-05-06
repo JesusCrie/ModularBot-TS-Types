@@ -1,6 +1,6 @@
-import { RestActions } from './restactions';
+import { RestAction } from './restactions';
 
-export interface PaginationAction<T, M extends PaginationAction<T, M>> extends RestActions<Array<T>>, Iterable<T> {
+export interface PaginationAction<T, M extends PaginationAction<T, M>> extends RestAction<Array<T>> {
     cacheSize(): number;
 
     isEmpty(): boolean;
@@ -28,8 +28,6 @@ export interface PaginationAction<T, M extends PaginationAction<T, M>> extends R
 
     // Complex return type
     takeRemainingAsync(amount: number): any;
-
-    iterator(): Iterator<T>;
 
     forEachAsync(action: (value: T) => boolean, failure?: (err: Error) => void): any;
 

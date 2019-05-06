@@ -1,7 +1,7 @@
 import { JDA } from '../JDA';
 import { TimeUnit } from '../../../TimeUnit';
 
-export interface RestActions<T> {
+export interface RestAction<T> {
     getJDA(): JDA;
 
     setCheck(checks: () => boolean): this;
@@ -21,6 +21,6 @@ export interface RestActions<T> {
     queueAfter(delay: number, unit: TimeUnit, success?: (val: T) => void, failure?: (err: Error) => void): any;
 }
 
-export interface AuditableRestAction<T> extends RestActions<T> {
+export interface AuditableRestAction<T> extends RestAction<T> {
     reason(reason: string): this;
 }

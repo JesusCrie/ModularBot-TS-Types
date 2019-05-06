@@ -8,14 +8,14 @@ import { Category } from './Category';
 import { Channel } from './Channel';
 import { Emote, ListedEmote } from './Emote';
 import { JDA } from '../_core/JDA';
+import { RestAction } from '../_core/restactions/restactions';
+import { Region } from '../_core/Region';
 
 export interface Guild extends ISnowflake {
-    // TODO type
-    // TODO when better rest action
-    retrieveRegions(includeDeprecated?: boolean): Promise<Array<any>>;
+    retrieveRegions(includeDeprecated?: boolean): RestAction<Array<Region>>;
 
     // TODO better rest action
-    addMember(accessToken: string, user: User | string | number): Promise<void>;
+    addMember(accessToken: string, user: User | string | number): Promise<any>;
 
     getName(): string;
 
@@ -30,7 +30,7 @@ export interface Guild extends ISnowflake {
     getSplashUrl(): string;
 
     // TODO when better rest action
-    getVanityUrl(): Promise<string>;
+    getVanityUrl(): RestAction<string>;
 
     getAfkChannel(): VoiceChannel;
 
@@ -115,23 +115,17 @@ export interface Guild extends ISnowflake {
     // Hide caches
     // getEmoteCache(): Array<Emote>;
 
-    // TODO when better rest action
-    retrieveEmotes(): Promise<Array<ListedEmote>>
+    retrieveEmotes(): RestAction<Array<ListedEmote>>
 
-    // TODO when better rest action
-    retrieveEmoteById(id: string): Promise<ListedEmote>;
+    retrieveEmoteById(id: string): RestAction<ListedEmote>;
 
-    // TODO when better rest action
-    retrieveEmote(emote: Emote): Promise<ListedEmote>;
+    retrieveEmote(emote: Emote): RestAction<ListedEmote>;
 
-    // TODO when better rest action
-    getBanList(): Promise<Array<Ban>>;
+    getBanList(): RestAction<Array<Ban>>;
 
-    // TODO when better rest action
-    getBanById(user: User | string): Promise<Ban>;
+    getBanById(user: User | string): RestAction<Ban>;
 
-    // TODO when better rest action
-    getPrunableMemberCount(days: number): Promise<number>;
+    getPrunableMemberCount(days: number): RestAction<number>;
 
     getPublicRole(): Role;
 
@@ -147,13 +141,12 @@ export interface Guild extends ISnowflake {
     // getRecentMentions(): any;
 
     // TODO type
+    // TODO when better rest actions
     getAuditLogs(): any;
 
-    // TODO when better rest action
-    leave(): Promise<void>;
+    leave(): RestAction<void>;
 
-    // TODO when better rest action
-    delete(mfaCode?: string): Promise<void>;
+    delete(mfaCode?: string): RestAction<void>;
 
     // TODO type
     getAudioManager(): any;
@@ -161,12 +154,10 @@ export interface Guild extends ISnowflake {
     getJDA(): JDA;
 
     // TODO type
-    // TODO when better rest action
-    getInvites(): Promise<Array<any>>;
+    getInvites(): RestAction<Array<any>>;
 
     // TODO type
-    // TODO when better rest action
-    getWebhooks(): Promise<Array<any>>;
+    getWebhooks(): RestAction<Array<any>>;
 
     // TODO type
     getVoiceStates(): Array<any>;

@@ -8,6 +8,8 @@ import { PrivateChannel } from '../_entities/PrivateChannel';
 import { Emote } from '../_entities/Emote';
 import { SelfUser } from '../_entities/SelfUser';
 import { Presence } from './Presence';
+import { GuildAction } from './restactions/GuildAction';
+import { RestAction } from './restactions/restactions';
 
 export enum JDAStatus {
     INITIALIZING,
@@ -62,8 +64,7 @@ export interface JDA {
 
     getRegisteredListeners(): Array<any>;
 
-    // TODO extend rest action to support it
-    // createGuild(name: string): any;
+    createGuild(name: string): GuildAction;
 
     // Hide caches
     // getAudioManagerCache(): any;
@@ -82,9 +83,7 @@ export interface JDA {
 
     getMutualGuilds(...users: Array<User>): Array<Guild>;
 
-    // TODO better rest action
-    // TODO wrap rest action
-    //retrieveUserById(id: string): Promise<User>;
+    retrieveUserById(id: string): RestAction<User>;
 
     // Hide caches
     // getGuildCache(): Array<Guild>;

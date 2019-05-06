@@ -1,6 +1,7 @@
 import { Channel } from './Channel';
 import { TextChannel } from './TextChannel';
 import { VoiceChannel } from './VoiceChannel';
+import { RestAction } from '../_core/restactions/restactions';
 
 export interface Category extends Channel {
     getChannels(): Array<Channel>;
@@ -9,11 +10,9 @@ export interface Category extends Channel {
 
     getVoiceChannels(): Array<VoiceChannel>;
 
-    // TODO better rest action
-    createTextChannel(): Promise<TextChannel>;
+    createTextChannel(): RestAction<TextChannel>;
 
-    // TODO better rest action
-    createVoiceChannel(): Promise<VoiceChannel>;
+    createVoiceChannel(): RestAction<VoiceChannel>;
 
     // TODO type
     modifyTextChannelPositions(): any;
