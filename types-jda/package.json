@@ -1,0 +1,23 @@
+{
+  "name": "@modularbot/types-jda",
+  "version": "1.0.1",
+  "description": "ModularBot TS Declaration Files - JDA",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JesusCrie/ModularBot-TS-Types.git"
+  },
+  "keywords": [
+    "modularbot",
+    "ts",
+    "discord",
+    "jda"
+  ],
+  "author": "Jesus_Crie <lucas.malandrino@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/JesusCrie/ModularBot-TS-Types/issues"
+  },
+  "homepage": "https://github.com/JesusCrie/ModularBot-TS-Types#readme"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@modularbot/types-core",
+  "version": "1.0.0",
+  "description": "ModularBot TS Declaration Files - Core",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JesusCrie/ModularBot-TS-Types.git"
+  },
+  "keywords": [
+    "modularbot",
+    "ts",
+    "discord"
+  ],
+  "author": "Jesus_Crie <lucas.malandrino@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/JesusCrie/ModularBot-TS-Types/issues"
+  },
+  "homepage": "https://github.com/JesusCrie/ModularBot-TS-Types#readme"
+}
