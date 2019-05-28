@@ -124,7 +124,7 @@ export declare interface ShardManager {
 
     setPresence(status: OnlineStatus, game: Game): void;
 
-    setPresenceProvider(statusProvider: (shardId: number) => OnlineStatus, gameProvder: (shardId: number) => Game): void;
+    setPresenceProvider(statusProvider: (shardId: number) => OnlineStatus, gameProvider: (shardId: number) => Game): void;
 
     setStatus(status: OnlineStatus): void;
 

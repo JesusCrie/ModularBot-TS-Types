@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/JesusCrie/ModularBot-TS-Types/issues"
   },
-  "homepage": "https://github.com/JesusCrie/ModularBot-TS-Types#readme"
+  "homepage": "https://github.com/JesusCrie/ModularBot-TS-Types#readme",
+  "dependencies": {
+    "@modularbot/types-jda": "^1.0"
+  }
 }
