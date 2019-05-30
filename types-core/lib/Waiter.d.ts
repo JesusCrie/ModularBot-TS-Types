@@ -1,6 +1,7 @@
-import { Event, JDA, MessageReceivedEvent } from '../../types-jda/jda/core';
-import { Class } from './graal/Class';
-import { MessageChannel, User } from '../../types-jda/jda/entities';
+// @ts-ignore
+import { JDA, MessageReceivedEvent, User } from '@modularbot/types-jda';
+// @ts-ignore
+import { Class } from '@modularbot/types-graal';
 
 export declare class Waiter {
 

@@ -1,17 +1,22 @@
-import { JDA, JDAStatus, OnlineStatus, RestAction, ShardManager } from '../../types-jda/jda/core';
+import { ModuleManager } from './module/ModuleManager';
 import {
     ApplicationInfo,
     Category,
     Emote,
     Game,
     Guild,
+    JDA,
+    JDAStatus,
+    OnlineStatus,
     PrivateChannel,
+    RestAction,
     Role,
+    ShardManager,
     TextChannel,
     User,
     VoiceChannel
-} from '../../types-jda/jda/entities';
-import { ModuleManager } from './module/ModuleManager';
+    // @ts-ignore
+} from '@modularbot/types-jda';
 
 export declare class ModularBot implements ShardManager {
 

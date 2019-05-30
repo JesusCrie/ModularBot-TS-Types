@@ -1,6 +1,6 @@
 {
   "name": "@modularbot/types-graal",
-  "version": "1.0.2",
+  "version": "1.1.1",
   "description": "ModularBot TS Declaration Files - Graal / Java",
   "types": "index",
   "repository": {
@@ -10,7 +10,8 @@
   "keywords": [
     "modularbot",
     "ts",
-    "discord"
+    "discord",
+    "graal"
   ],
   "author": "Jesus_Crie <lucas.malandrino@gmail.com>",
   "license": "GPL-3.0",

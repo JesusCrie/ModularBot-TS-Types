@@ -1,5 +1,5 @@
-import { Game } from '../../types-jda/jda/entities';
-import { OnlineStatus } from '../../types-jda/jda/core';
+// @ts-ignore
+import { Game, OnlineStatus } from '@modularbot/types-jda';
 
 export declare interface StateProvider {
 

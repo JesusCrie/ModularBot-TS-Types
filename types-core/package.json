@@ -1,7 +1,8 @@
 {
   "name": "@modularbot/types-core",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "ModularBot TS Declaration Files - Core",
+  "types": "index",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JesusCrie/ModularBot-TS-Types.git"
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/JesusCrie/ModularBot-TS-Types#readme",
   "dependencies": {
-    "@modularbot/types-jda": "^1.0"
+    "@modularbot/types-graal": "^1.1.1",
+    "@modularbot/types-jda": "^1.1.1"
   }
 }
