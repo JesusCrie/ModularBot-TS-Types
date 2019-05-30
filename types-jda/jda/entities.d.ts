@@ -14,7 +14,7 @@ export { Member } from './_entities/Member';
 export { Message, MentionType, Attachment } from './_entities/Message';
 export { MessageChannel } from './_entities/MessageChannel';
 export {
-    MessageEmbed /*, AuthorInfo, EmbedType, Field, Footer, ImageInfo, Thumbnail, VideoInfo */
+    MessageEmbed /*, AuthorInfo, EmbedType, MessageEmbedField, Footer, ImageInfo, Thumbnail, VideoInfo */
 }from './_entities/MessageEmbed';
 export { MessageHistory, MessageRetrieveAction } from './_entities/MessageHistory';
 export { PermissionOverride } from './_entities/PermissionOverride';

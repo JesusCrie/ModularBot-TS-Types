@@ -22,7 +22,7 @@ export declare class MessageEmbed {
 
     public getImage(): ImageInfo;
 
-    public getFields(): Array<Field>;
+    public getFields(): Array<MessageEmbedField>;
 
     // Not supported
     // getColor(): any;
@@ -88,7 +88,10 @@ export declare class ImageInfo {
     public getHeight(): number;
 }
 
-export declare class Field {
+export declare class MessageEmbedField {
+
+    public constructor(name: string | null, value: string | null, inline: boolean);
+
     public getName(): string;
 
     public getValue(): string;

@@ -20,6 +20,7 @@ export declare class ModularBot implements ShardManager {
     public login(): void;
 
     // Well, another time
+    // TODO java async
     //public getMainPool(): ScheduledExecutorService;
 
     // Interface impl

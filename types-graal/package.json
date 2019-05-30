@@ -1,0 +1,21 @@
+{
+  "name": "@modularbot/types-graal",
+  "version": "1.0.2",
+  "description": "ModularBot TS Declaration Files - Graal / Java",
+  "types": "index",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JesusCrie/ModularBot-TS-Types.git"
+  },
+  "keywords": [
+    "modularbot",
+    "ts",
+    "discord"
+  ],
+  "author": "Jesus_Crie <lucas.malandrino@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/JesusCrie/ModularBot-TS-Types/issues"
+  },
+  "homepage": "https://github.com/JesusCrie/ModularBot-TS-Types#readme"
+}

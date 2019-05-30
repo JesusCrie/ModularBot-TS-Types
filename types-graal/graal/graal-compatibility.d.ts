@@ -1,3 +1,5 @@
+import { JavaClass, JavaObject } from './JavaClass';
+
 export declare function load(source: string | any): void;
 
 export declare function loadWithNewGlobal(source: string | any, args: Array<any>): void;
@@ -13,9 +15,9 @@ export declare class Graal {
 }
 
 export declare class Java {
-    static type(className: string): any;
+    static type(className: string): JavaClass<any>;
 
-    static from(javaData: any): Array<any>;
+    static from(javaData: JavaObject<any>): Array<any>;
 
     static to(jsData: any, toType: any): any;
 
@@ -23,7 +25,7 @@ export declare class Java {
 
     static isType(obj: any): boolean;
 
-    static typeName(obj: any): string | undefined;
+    static typeName(obj: JavaClass<any>): string | undefined;
 
     static isJavaFunction(fn: any): boolean;
 
